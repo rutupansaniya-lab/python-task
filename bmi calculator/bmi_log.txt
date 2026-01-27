@@ -1,7 +1,0 @@
-Weight: 40.0, Height: 1.53, BMI: 17.087444999786406
-Weight: 0.040600000000000004, Height: 0.06, BMI: 11.277777777777779
-Weight: 40.5, Height: 0.06, BMI: 11250.0
-Weight: 45.0, Height: 0.04, BMI: 28125.0
-Weight: 40.0, Height: 1.7779990398805183, BMI: 12.653100196000002, You are underweight. 
-Weight: 0.04, Height: 60.0, BMI: 1.1111111111111112e-05, You are underweight. 
-Weight: 4.0, Height: 0.05, BMI: 1599.9999999999998, You are obese. 
