@@ -48,14 +48,14 @@ def get_user_input():
     weight_in_kg = weight / conversion_factors[weight_unit]
 
 
-    height = input("Please enter your height : ").strip().lower()
+    height = input("Please enter your height : ").strip()
     # Validate height input
     while(True):
         try:
             height=float(height)
             break
         except ValueError:
-            height = input("Invalid input. Please enter a numeric height value: ")
+            height = input("Invalid input. Please enter a numeric height value: ").strip()
         
     # enter height unit
     while True:
