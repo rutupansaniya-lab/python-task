@@ -1,4 +1,4 @@
-import math
+
 def convert_weight(weight, from_unit, to_unit): 
 
     # Conversion factors
@@ -28,7 +28,11 @@ if __name__ == "__main__":
         # Input validation for weight
         while(True):
             try:
-                float(weight)
+                # should not be negative
+                if float(weight) < 0:
+                    weight = input("Weight cannot be negative. Please enter a valid weight value: ")
+                    continue
+                float(weight)  # try to convert to float
                 break
             except ValueError:
                 weight = input("Invalid input. Please enter a numeric weight value: ") 
@@ -40,7 +44,7 @@ if __name__ == "__main__":
             if from_unit in ['kg', 'g', 'lb', 'oz']:
                 break
             else:
-                print("Invalid unit. Please enter one of the following units: kg, g, lb, oz.").lower() 
+                print("Invalid unit. Please enter one of the following units: kg, g, lb, oz.")
 
         # Input validation for target unit
         while(True):
