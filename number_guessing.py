@@ -16,7 +16,11 @@ def main():
     attempts = 0
     while True:
         try:
+            #validate the input (input should be an integer between 1 and 100)
             user_guess = int(input("Enter your guess (1-100): "))
+            while user_guess < 1 or user_guess > 100:
+                print("Please enter a number between 1 and 100.")
+                user_guess = int(input("Enter your guess (1-100): "))
             attempts += 1
             result = check_guess(user_guess, target_number)
             if result == "correct":
