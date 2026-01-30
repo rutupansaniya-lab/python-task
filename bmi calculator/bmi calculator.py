@@ -1,6 +1,5 @@
 import random
 
-import git
 # function to calculate BMI with file logging
 def calculate_bmi(weight, height):  
     bmi = weight / (height ** 2)
