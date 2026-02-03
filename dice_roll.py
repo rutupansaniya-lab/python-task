@@ -17,28 +17,28 @@ def get_input():
 while True:
 
     no_of_player = get_input()   # input function call here
-    Total_of_player = {}
+    player_total = {}
 
     # Game loop
     while True:
         for i in range(no_of_player):
-            input(f"Player {i+1}, press Enter to roll the dice...")
+            player_name = f"Player {i+1}"
+            input(f"{player_name}, press Enter to roll the dice...")
 
             result = dice_roll()
-            Total_of_player[f"Player {i+1}"] = Total_of_player.get(f"Player {i+1}", 0) + result
+            player_total[player_name] = player_total.get(player_name, 0) + result
 
             print(
                 f"Player {i+1} rolled a {result}. "
-                f"Total points: {Total_of_player[f'Player {i+1}']}"
+                f"Total points: {player_total[player_name]}"
             )
 
-            if Total_of_player[f"Player {i+1}"] >= 50:
-                print(f"\n Player {i+1} wins with {Total_of_player[f'Player {i+1}']} points!")
-
+            if player_total[player_name] >= 50:
+                print(f"\n Player {i+1} wins with {player_total[player_name]} points!")
                 another_game = input("Do you want to play another game? (yes/no): ").strip().lower()
                 if another_game == "yes":
                     print("\n Starting a new game...\n")
-                    break   # break game loop → ask players again
+                    break   # break game loop 
                 else:
                     print("Thanks for playing! ")
                     exit()
